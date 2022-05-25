@@ -1,0 +1,483 @@
+:root {
+    --main-color: #011f9e;
+    --secondery-color: #f36b2a;
+    --third-color: #161c34;
+}
+
+/********************************** Section start **********************************/
+
+section {
+    position: relative;
+    background-image: url(../images/top_bg.png);
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-color: black;
+
+}
+
+/* Very Small */
+@media (max-width: 767px) {
+    section {
+        height: calc(100vh - 72px);
+    }
+}
+/* Small */
+@media (min-width: 768px) and (max-width: 992px){
+    section {
+        height: calc(100vh - (72px * 2));
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    section {
+        height: calc(100vh - 72px);
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    section {
+        height: calc(100vh - 72px);
+    }
+}
+
+section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+section .container .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+section .container .text h1 {
+    font-weight: 900;
+    color: var(--secondery-color);
+    font-size: 50px;
+    margin-bottom: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+section .container .text h2 {
+    margin-top: -15px;
+    margin-bottom: 0;
+    display: inline-block;
+    color: white;
+
+}
+
+section .container .text p {
+    color: rgb(255, 255, 255, 0.5);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+section .container .images-slide-show {
+    transform: translateY(100px);
+    width: 600px;
+}
+
+section .container .images-slide-show .images {
+    overflow: hidden;
+}
+
+section .container .images-slide-show .images .slides{
+    display: flex;
+    align-items: center;
+}
+
+/* Very Small */
+@media (max-width: 767px) {
+    section .container .images-slide-show {
+        display: none;
+    }
+    
+    section .container .text h1 {
+        font-size: 30px;
+    }
+
+    section .container .text h2 {
+        font-size: 22px;
+        margin-top: -10px;
+    }
+
+    section .container .text p {
+        text-align: center;
+    }
+}
+/* Small */
+@media (min-width: 768px) and (max-width: 992px){
+    section .container .images-slide-show {
+        display: none;
+    }
+
+    section .container .text p {
+        text-align: center;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    section .container .images-slide-show {
+        display: block;
+    }
+
+    section .container .text h1 {
+        font-size: 36px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    section .container .images-slide-show {
+        display: block;
+    }
+
+    section .container .text h1 {
+        font-size: 50px;
+    }
+}
+
+section .container .images-slide-show img {
+    max-width: 600px;
+    height: 100%;
+}
+
+
+/********************************** Section end **********************************/
+
+/********************************** Landing Section start **********************************/
+
+.landing {
+    margin-top: 40px;
+}
+
+.landing .container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing .container .text {
+    width: 400px;
+}
+
+.landing .container .text h2 {
+    font-size: 46px;
+    margin-bottom: 0;
+}
+
+.landing .container .text p {
+    font-size: 18px;
+    color: #777;
+    line-height: 1.7;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.landing .container a{
+    font-size: 16px;
+    position: relative;
+    background-color: var(--secondery-color);
+    height: 45px;
+    border-radius: 30px 0 0 30px;
+    display: inline-block;
+    color: white;
+    padding: 13px 10px 13px 30px;
+    margin: 10px 0 0 0;
+    transition: 300ms;
+}
+
+.landing .container a::after {
+    content: ">";
+    position: absolute;
+    top: 0;
+    right: -45px;
+    font-size: 36px;
+    background-color: #ddd;
+    color: black;
+    height: 45px;
+    width: 45px;
+    border-radius: 0 30px 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 300ms;
+}
+
+.landing .container a:hover {
+    background-color: #010e48;
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 20px black;
+}
+
+/* Very Small */
+@media (max-width: 767px) {
+    .landing .container .text {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.landing .container img {
+    max-width: 100%;
+}
+
+.landing .container .image {
+    position: relative;
+}
+
+.landing .container .about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.landing .container .our-cars {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+
+/* Very Small */
+@media (max-width: 767px) {
+    .landing .container .text {
+        width: 100%;
+    }
+}
+/* Small */
+@media (min-width: 768px) and (max-width: 992px){
+    .landing .container .text {
+        width: 100%;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .landing .container .about-us,
+    .landing .container .our-cars {
+        flex-wrap: nowrap;
+    }
+    .landing .container .text {
+        width: 400px;
+    }
+    
+}
+/* Large */
+@media (min-width: 1200px) {
+    .landing .container .our-cars {
+        margin-top: 100px;
+    }
+    .landing .container .text {
+        width: 400px;
+    }
+}
+
+/********************************** Landing Section end **********************************/
+
+/********************************** fetures Section start **********************************/
+
+.fetures {
+    color: white;
+    margin-top: 60px;
+    margin-bottom: 0;
+    padding-top: 25px;
+    padding-bottom: 250px;
+    position: relative;
+}
+
+.fetures::after {
+    position: absolute;
+    content: "";
+    background-color: var(--third-color);
+    transform: skewY(5deg);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.fetures h2 {
+    border: 2px solid transparent;
+    width: fit-content;
+    background-color: var(--secondery-color);
+    padding: 15px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 1px;
+    margin-bottom: 70px;
+    font-size: 45px;
+    transition: 300ms;
+}
+
+.fetures h2:hover {
+    transform: translateX(-10px);
+}
+
+.fetures .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 50px;
+}
+
+.fetures .container .card .icon {
+    font-size: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fetures .container .card h3 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.fetures .container p {
+    text-align: center;
+}
+/********************************** fetures Section end **********************************/
+
+
+/********************************** Gallary Section start **********************************/
+
+.gallary {
+    margin-bottom: 0;
+    padding-top: 25px;
+    padding-bottom: 190px;
+    position: relative;
+    margin-top: -180px;
+}
+
+.gallary::before {
+    content: "";
+    position: absolute;
+    background-color: var(--secondery-color);
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: skewY(-5deg);
+}
+
+.gallary h2 {
+    border: 2px solid transparent;
+    width: fit-content;
+    background-color: var(--third-color);
+    padding: 15px 30px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 1px;
+    margin-bottom: 70px;
+    font-size: 45px;
+    transition: 300ms;
+}
+
+.gallary h2:hover {
+    transform: translateX(-10px);
+}
+
+.gallary .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.gallary .container .card {
+    padding: 7px 7px 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+    transition: 300ms;
+    box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%);
+}
+
+.gallary .container .card:hover {
+    transform: translateY(-5px);
+}
+
+
+.gallary .container .card .image {
+    overflow: hidden;
+}
+
+.gallary .container img {
+    width: 100%;
+    transition: 300ms;
+}
+
+.gallary .container .card:hover img {
+    transform: rotate(-5deg) scale(1.1);
+}
+/********************************** Gallary Section end **********************************/
+
+/********************************** Info Section start **********************************/
+.info {
+    background-color: var(--third-color);
+    margin-top: -70px;
+    margin-bottom: 0;
+    color: white;
+    padding: 70px 0;
+}
+
+.info .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.info .container .card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.info .container .card i {
+    font-size: 50px;
+}
+
+.info .container .card .text {
+    margin-left: 20px;
+}
+
+.info .container .card .text h3 {
+    font-size: 50px;
+    margin-bottom: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.info .container .card .text h3::after {
+    content: "+";
+    position: absolute;
+    font-size: 36px;
+    top: -10px;
+    right: -36px;
+}
+
+.info .container .card .text p {
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+}
+/********************************** Info Section end **********************************/

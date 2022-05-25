@@ -1,0 +1,515 @@
+:root {
+    --main-color: #011f9e;
+    --secondery-color: #f36b2a;
+    --third-color: #161c34;
+}
+
+/********************************** Section start **********************************/
+section {
+    background-color: var(--third-color);
+    position: relative;
+    color: white;
+}
+
+section .container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(65vh - 72px);
+
+}
+
+section .container h1 {
+    padding-bottom: 5px;
+    margin-top: 0;
+    font-size: 46px;
+    margin-bottom: 0;
+}
+
+section .container .text {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+section .container .text::after {
+    content: "";
+    position: absolute;
+    height: 1.5px;
+    background-color: #eee;
+    width: 50%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section .container .links a{
+    color: white;
+    transition: 300ms;
+}
+
+section .container .links {
+    font-size: 18px;
+}
+
+section .container .links a:hover {
+    color: var(--secondery-color);
+}
+/********************************** Section end **********************************/
+
+/********************************** Landing start **********************************/
+.landing {
+    background-color: #eee;
+}
+
+.landing .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.landing .container .content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.landing .container .content .image img {
+    max-width: 100%;
+}
+
+.landing .container .image {
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.landing .container .text {
+    padding: 20px 15px;
+}
+
+/* Very Small */
+@media (max-width: 767px) {
+    .landing .container .text {
+        width: 100%;
+    }
+    .landing .container .image {
+        width: 100%;
+    }
+}
+/* Small */
+@media (min-width: 768px) and (max-width: 992px){
+    .landing .container .text {
+        width: 100%;
+    }
+    .landing .container .image {
+        width: 100%;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .landing .container .text {
+        max-width: 284px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .landing .container .text {
+        max-width: 400px;
+    }
+}
+
+.landing .container .content .text h2 {
+    color: var(--secondery-color);
+    margin: 0;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+    padding: 5px 0;
+}
+
+.landing .container .content .text h2::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondery-color);
+}
+
+.landing .container .content .text h3 {
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+.landing .container .content .text p {
+    color: #777;
+    
+}
+/********************************** Landing end **********************************/
+
+/********************************** Info Section start **********************************/
+.info {
+    background-color: var(--third-color);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: white;
+    padding: 70px 0;
+}
+
+.info .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.info .container .card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.info .container .card i {
+    font-size: 50px;
+}
+
+.info .container .card .text {
+    margin-left: 20px;
+}
+
+.info .container .card .text h3 {
+    font-size: 50px;
+    margin-bottom: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.info .container .card .text h3::after {
+    content: "+";
+    position: absolute;
+    font-size: 36px;
+    top: -10px;
+    right: -36px;
+}
+
+.info .container .card .text p {
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+}
+/********************************** Info Section end **********************************/
+/********************************** Team Section start **********************************/
+.team {
+    background-color: #eee;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.team h2 {
+    margin: 0 auto 50px;
+    width: fit-content;
+    color: var(--secondery-color);
+    position: relative;
+}
+
+.team h2::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    background-color: var(--secondery-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.team .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.team .container .card {
+    position: relative;
+    transition: 300ms;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.team .container .card .content {
+    background-color: white;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    padding: 1px;
+}
+
+.team .container .card:hover{
+    transform: translateY(-10px);
+}
+
+.team .container .card:hover .content {
+    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+}
+
+.team .container .card .data {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.team .container .card .social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 200px;
+    background-color: transparent;
+    font-size: 20px;
+    transform: translate(-50%, 15px);
+}
+
+.team .container .card .social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #eee;
+    border-radius: 50%;
+    padding: 7px;
+    color: #777;
+    transition: 500ms;
+}
+
+.team .container .card .social a:hover {
+    color: var(--main-color);
+    background-color: #bbb;
+}
+
+.team .container .card .data {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.team .container .card .data img {
+    max-width: 100%;
+    transition: 300ms;
+}
+
+.team .container .card:hover img {
+    transform: scale(1.1);
+}
+
+.team .container .description {
+    padding: 20px;
+}
+
+.team .container .description h3 {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.team .container .description h3::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -55px;
+    height: 2px;
+    width: 55px;
+    background-color: var(--secondery-color);
+}
+
+.team .container .card:hover .description h3::before {
+    left: 0;
+    animation: name-loader 1s ease;
+}
+
+.team .container .description p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+/********************************** Team Section end **********************************/
+/********************************** services Section start **********************************/
+.services {
+    background-color: var(--third-color);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.services h2 {
+    margin: 0 auto 50px;
+    width: fit-content;
+    color: var(--secondery-color);
+    position: relative;
+}
+
+.services h2::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    background-color: var(--secondery-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.services .container .card {
+    background-color: #3F4C7F;
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+    border-radius: 6px;
+    transition: 300ms;
+}
+
+.services .container .card:hover {
+    transform: translate(-5px, -10px);
+}
+
+.services .container .card > i {
+    display: block;
+    color: #d5d5d5;
+    font-size: 64px;
+    text-align: center;
+    margin: 30px auto 20px;
+}
+
+.services .container .card > h3 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #ffdd9a;
+}
+
+.services .container .card .foot {
+    padding: 20px;
+    border-top: 2px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffdd9a;
+}
+
+.services .container .card .foot a {
+    color: #ffdd9a;
+}
+
+.services .container .card:hover .foot i {
+    animation: arrow 500ms linear infinite;
+}
+/********************************** Services Section end **********************************/
+
+/********************************** Testimonials Section start **********************************/
+.testimonials {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #eee;
+}
+
+.testimonials h2 {
+    margin: 0 auto 10px;
+    width: fit-content;
+    color: var(--secondery-color);
+    position: relative;
+}
+
+.testimonials h2::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    background-color: var(--secondery-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.testimonials h3 {
+    margin: 0 auto 70px;
+    width: fit-content;
+    font-size: 36px;
+    color: var(--third-color);
+}
+
+.testimonials .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.testimonials .container .card{
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+    padding: 20px;
+}
+
+.testimonials .container .card img {
+    position: absolute;
+    width: 90px;
+    border-radius: 50%;
+    border: 5px solid #eee;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.testimonials .container .card h4 {
+    font-size: 18px;
+    margin: 10px 0 0;
+}
+
+.testimonials .container .card span {
+    color: #434343;
+    display: block;
+    padding: 5px;
+}
+
+.testimonials .container .card .rate {
+    color: #ffc107;
+}
+
+.testimonials .container .card p {
+    font-size: 15px;
+    color: #777;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+/********************************** Testimonials Section end **********************************/
+
+/* Animation start */
+@keyframes name-loader {
+    0% {
+        left: -55px;
+    }
+    50% {
+        left: calc(100% - 55px);
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes arrow {
+    100% {
+        transform: translateX(10px);
+    }
+}
+
+/* Animation end */

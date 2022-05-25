@@ -1,0 +1,339 @@
+:root {
+    --main-color: #011f9e;
+    --secondery-color: #f36b2a;
+    --third-color: #161c34;
+}
+
+/********************************** Success start **********************************/
+.success {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    z-index: 20;
+    background-color: rgba(0,0,0,0.4);
+    transition: 600ms;
+    overflow: hidden;
+}
+
+.success.active {
+    width: 100vw;
+    height: 100vh;
+}
+
+.success .window {
+    background-color: rgb(238, 238, 238, 0.86);
+    width: 60%;
+    border-radius: 5px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.success .window .content .checked {
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #338811;
+}
+
+.success .window .content p {
+    font-size: 36px;
+    margin-bottom: 0;
+}
+
+/* Very Small */
+@media (max-width: 767px) {
+    .success .window .content .checked {
+        font-size: 40px;
+    }
+    .success .window .content p {
+        font-size: 16px;
+    }
+}
+/* Small */
+@media (min-width: 768px) and (max-width: 992px){
+    .success .window .content .checked {
+        font-size: 50px;
+    }
+    .success .window .content p {
+        font-size: 28px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+
+}
+/* Large */
+@media (min-width: 1200px) {
+
+}
+/********************************** Success end **********************************/
+
+/********************************** Section start **********************************/
+section {
+    background-color: var(--third-color);
+    position: relative;
+    color: white;
+}
+
+section .container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(65vh - 72px);
+
+}
+
+section .container h1 {
+    padding-bottom: 5px;
+    margin-top: 0;
+    font-size: 46px;
+    margin-bottom: 0;
+}
+
+section .container .text {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+section .container .text::after {
+    content: "";
+    position: absolute;
+    height: 1.5px;
+    background-color: #eee;
+    width: 50%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section .container .links a{
+    color: white;
+    transition: 300ms;
+}
+
+section .container .links {
+    font-size: 18px;
+}
+
+section .container .links a:hover {
+    color: var(--secondery-color);
+}
+/********************************** Section end **********************************/
+
+/********************************** form start **********************************/
+.form {
+    background-color: #eee;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-size: 14px;
+}
+
+.form .container .box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    border-radius: 15px;
+    overflow: hidden;
+}
+/* Small */
+@media (max-width: 992px){
+    .form .container .box {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+.form .container .box .left-form {
+    background-color: white;
+    padding: 20px;
+}
+
+.form .container .box .right-form {
+    background-color: var(--main-color);
+    padding: 20px;
+}
+
+.form .container .box h2 {
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+.form .container .box .left-form h2 {
+    color: var(--main-color);
+}
+
+.form .container .box .right-form{
+    color: white;
+}
+
+.form .container .box input,
+.form .container .box select {
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+    margin: 24px 0;
+    border-bottom: 1px solid #ddd;
+    transition: 300ms;
+}
+
+.form .container .box .inputs {
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.form .container .box .inputs > input:not(input[type = "date"], input[type = "submit"]),
+.form .container .box .left-form .password input[type = "password"] {
+    width: 100%;
+}
+
+.form .container .box input:focus,
+.form .container .box select:focus {
+    background-color: transparent;
+    outline: none;
+}
+
+.form .container .box .left-form input:focus,
+.form .container .box .left-form select:focus{
+    border-bottom: 1px solid #555;
+}
+
+.form .container .box .left-form .password input[type = "password"] {
+    margin: 0;
+}
+
+.form .container .box .left-form .password {
+    position: relative;
+    overflow: visible;
+    width: 100%;
+    margin: 24px 0;
+}
+
+.form .container .box .left-form .password::after {
+    content: "The password must consest of 8 characters no more no less, start with uppercase character, include one digit at least, include one special character and no white spaces allowed";
+    position: absolute;
+    top: 68px;
+    right: 0;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 6px;
+    transform: translateY(20px);
+    transition: 600ms ;
+    z-index: -1;
+    opacity: 0;
+}
+
+.form .container .box .left-form .password::before {
+    content: "";
+    position: absolute;
+    top: 38px;
+    right: 20px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid #f2f2f2;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    transform: translateY(20px);
+    transition: 600ms ;
+    z-index: -1;
+    opacity: 0;
+}
+
+.form .container .box .left-form .password span {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: crimson;
+    font-style: italic;
+    display: none;
+}
+
+.form .container .box .left-form .password:hover::after,
+.form .container .box .left-form .password:hover::before {
+    z-index: 0;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form .container .box .right-form input:focus,
+.form .container .box .right-form select:focus {
+    border-bottom: 1px solid white;
+}
+
+.form .container .box .left-form .name {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(232px, 1fr));
+    width: 100%;
+    gap: 0 30px;
+}
+
+.form .container .box .left-form .name input {
+    display: inline-block;
+}
+
+.form .container .box .right-form .country select,
+.form .container .box .right-form .country {
+    color: white;
+    width: 100%;
+}
+
+.form .container .box .right-form input,
+.form .container .box .right-form input::placeholder{
+    color: white;
+}
+
+.form .container .box .right-form select option {
+    background-color: var(--main-color);
+    border-radius: 0;
+    color: white;
+}
+.form .container .box .right-form select {
+    color: #c1c1c1;
+}
+
+.form .container .box .right-form .phone {
+    display: grid;
+    grid-template-columns: 1fr minmax(200px, 4fr);
+    gap: 0 20px;
+}
+
+/* Small */
+@media (max-width: 400px){
+    .form .container .box .right-form .phone {
+        grid-template-columns: 1fr;
+        gap: 0 10px;
+    }
+}
+
+.form .container .box .right-form label a {
+    color: white;
+    border-bottom: 1px dotted white ;
+}
+
+.form .container .box .right-form input[type = "submit"] {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 17px 0px;
+    background-color: #eee;
+    border-radius: 40px;
+    color: #111;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.form .container .box .right-form input[type = "submit"]:hover {
+    color: black;
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 6px 17px 0px;
+}
+/********************************** form end **********************************/
